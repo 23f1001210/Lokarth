@@ -134,50 +134,46 @@ const closeModalBtn = document.getElementById('closeModalBtn');
 const contactModal = document.getElementById('contactModal');
 
 openModalBtn.onclick = function() {
-  contactModal.style.display = 'flex';
+    contactModal.style.display = 'flex';
 };
 
 closeModalBtn.onclick = function() {
-  contactModal.style.display = 'none';
+    contactModal.style.display = 'none';
 };
 
 window.onclick = function(event) {
-  if (event.target == contactModal) {
-    contactModal.style.display = 'none';
-  }
+    if (event.target == contactModal) {
+        contactModal.style.display = 'none';
+    }
 };
 
 const contactForm = document.getElementById('contactForm');
-contactForm.onsubmit = function(e) {
-  e.preventDefault();
-  
-  alert('Thank you! Your details have been submitted.');
-  contactModal.style.display = 'none';
+contactForm.onsubmit = function(event) {
+    event.preventDefault();
+
+    const submitBtn = event.target.querySelector('button[type="submit"]');
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending...';
+
+    const datetime = new Date().toLocaleString();
+
+    emailjs.send('service_Lokarth', 'template_yookgyo', {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        phone: document.getElementById('phone').value,
+        description: document.getElementById('description').value,
+        datetime: datetime
+    })
+    .then(function(response) {
+        alert('Thank you! Your message has been sent.');
+        contactModal.style.display = 'none';
+        contactForm.reset();
+    })
+    .catch(function(error) {
+        alert('Oops! Something went wrong. Please try again later.');
+    })
+    .finally(function() {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Submit';
+    });
 };
-
-document.getElementById('contactForm').onsubmit = function(event) {
-  event.preventDefault();
-
-  const submitBtn = event.target.querySelector('button[type="submit"]');
-  submitBtn.disabled = true; 
-  submitBtn.textContent = 'Sending...'; 
-
-  emailjs.send('service_Lokarth', 'template_yookgyo', {
-    name: document.getElementById('name').value,
-    email: document.getElementById('email').value,
-    phone: document.getElementById('phone').value
-  })
-  .then(function(response) {
-    alert('Thank you! Your message has been sent.');
-    document.getElementById('contactModal').style.display = 'none';
-    document.getElementById('contactForm').reset();
-  })
-  .catch(function(error) {
-    alert('Oops! Something went wrong. Please try again later.');
-  })
-  .finally(function() {
-    submitBtn.disabled = false;  // re-enable the button
-    submitBtn.textContent = 'Submit'; // reset button text
-  });
-};
-
