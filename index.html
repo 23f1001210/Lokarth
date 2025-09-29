@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Lokarth — Hero Replica</title>
+
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="index.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=share" />
+
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+        emailjs.init('KDkFrjLq-WRjVpkSU'); 
+    </script>
+
+</head>
+
+<body>
+
+    <div class="page">
+        <header>
+            <div class="logo">
+                <img src="./images/lokarth full logo-01-01.png" alt="logo">
+            </div>
+
+            <nav aria-label="Main Navigation">
+                <a>Solutions</a>
+                <a>Services</a>
+                <a>Donation List</a>
+                <a>About Rareblocks</a>
+            </nav>
+
+            <div class="actions">
+                <a class="signin" href="#">Sign in</a>
+                <button class="btn-primary">Create free account</button>
+            </div>
+        </header>
+
+        <main class="hero" role="main" aria-labelledby="main-heading">
+            <div class="hero-content">
+                <!-- left -->
+                <section class="left">
+                    <h1 id="main-heading">Connecting Donors<br />Directly to Verified<br />Charities</h1>
+
+                    <p class="lead">
+                        Support causes that matter — Donate money, food, clothes, or blood directly to verified
+                        charities or
+                        individuals in need, all with transparent tracking and official impact certificates.
+                    </p>
+
+                    <a class="know-more" href="#">Know More</a>
+
+                    <div class="stats" aria-hidden="false">
+                        <div class="stat">
+                            <div class="big">12</div>
+                            <div class="small">Premium<br />Charities</div>
+                        </div>
+
+                        <!-- <div style="width:18px;height:1px;background:linear-gradient(90deg,#dfe8ea,#fff);margin:0 8px">
+                        </div> -->
+
+                        <div class="stat">
+                            <div class="big">₹1M+</div>
+                            <div class="small">Trusted<br />Donors</div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="right">
+                    <img src="./images/doner.png" alt="Hero Image" />
+                </section>
+            </div>
+
+            <!-- Coming Soon Section -->
+            <section class="coming-soon">
+                <div class="illustration">
+                    <!-- replace with your own illustration -->
+                    <img src="./images/notify_me.png" alt="notify_me">
+                </div>
+
+                <h2>Something Great Is Coming Soon!</h2>
+                <p>
+                    We're building a platform to simplify donations, create transparency,
+                    and connect people who care with those in need.
+                </p>
+
+                <form class="notify-form">
+                    <input type="email" placeholder="Enter email address" required>
+                    <button type="submit">Notify Me</button>
+                </form>
+            </section>
+
+
+            <section class="why-lokarth">
+                <h2>Why Lokarth</h2>
+                <div class="features-grid" id="features-container">
+                    <!-- JS will inject feature cards here -->
+                </div>
+            </section>
+
+            <section class="vision-section">
+                <!-- Left Content -->
+                <div class="vision-text">
+                    <h2>Vision</h2>
+                    <p>A world where every donation reaches the right hands, creating lasting positive impact</p>
+                    <ul>
+                        <li>Lokarth works seamlessly across devices to make giving effortless.</li>
+                        <li>Every donation is transparent, verified, and traceable, so you always know your impact.</li>
+                    </ul>
+                    <a href="#" class="btn-download">Download Application</a>
+                </div>
+
+                <div>
+                    <img src="./images/phone.png" alt="" class="phone-image">
+                </div>
+
+                <!-- Phone Mockup -->
+                <!-- <div class="phone-mockup">
+                    <h3>Choose How You Want to Make a Difference</h3>
+                    <p>Select a donation type that speaks to your heart — every contribution brings hope and change</p>
+                    <div class="donation-options">
+                        <div class="option">💵 Donate Money</div>
+                        <div class="option active">🩸 Donate Blood</div>
+                        <div class="option">🍎 Donate Food</div>
+                        <div class="option">👕 Donate Clothes</div>
+                    </div>
+                </div> -->
+            </section>
+
+            <section class="impact-section">
+                <h2 class="impact-heading">Multiple Ways to Make an Impact</h2>
+                <p class="subtitle">
+                    Whether it’s money, food, clothes, or blood — Lokarth connects your kindness with the right cause.
+                </p>
+
+                <div class="cards-container" id="cardsContainer">
+                    <!-- Cards will be injected here by JS -->
+                </div>
+            </section>
+
+            <!-- Mission Section -->
+            <section class="mission">
+                <div class="mission-text">
+                    <h1>Mission</h1>
+                    <p>
+                        To simplify the donation process, ensure transparency, and provide real-time impact tracking —
+                        connecting verified donors directly with verified charities.
+                    </p>
+                    <a href="#" class="btn-mission">Donate Now</a>
+                </div>
+                <div class="mission-image">
+                    <img src="./images/mission.png" alt="Mission Illustration">
+                </div>
+            </section>
+
+            <section class="contact-us">
+                <div class="contact-text">
+                    <img src="./images/chat.png" alt="">
+                    <h2>Want to know more or collaborate with us?</h2>
+                    <p>We’re happy to connect. Drop your details and we’ll get back to you</p>
+                    <button class="contact-button" id="openModalBtn">Contact Us</button>
+                </div>
+            </section>
+
+            <!-- Modal -->
+            <div id="contactModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" id="closeModalBtn">&times;</span>
+                    <h3>Contact Details</h3>
+                    <form id="contactForm">
+                        <label for="name">Name:</label><br>
+                        <input type="text" id="name" name="name" required><br>
+                        <label for="email">Email ID:</label><br>
+                        <input type="email" id="email" name="email" required><br>
+                        <label for="phone">Phone Number:</label><br>
+                        <input type="tel" id="phone" name="phone" required><br><br>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+
+            <footer class="footer">
+                <div class="footer-top">
+                    <div class="footer-logo">
+                        <img src="./images/lokarth full logo-01-01.png" alt="Lokarth Logo" />
+                    </div>
+
+                    <div class="footer-desc">
+                        <p>
+                            We ara a lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                            eiusmod tempor incididunt ut labore exercitation ullamco laboris nisi ut
+                            aliquip ex ea commodo consequat jcfnicjeiwejokma scvkj vi
+                        </p>
+                    </div>
+
+                    <div class="footer-contact">
+                        <div>
+                            <i class="fas fa-phone-alt"></i>
+                            <section>
+                                <span>Tel</span><br />
+                                <a href="tel:3104372766">310-437-2766</a>
+                            </section>
+
+                        </div>
+                        <div>
+                            <i class="fas fa-envelope"></i>
+                            <section>
+                                <span>Mail</span>
+                                <br />
+                                <a href="mailto:unreal@outlook.com">unreal@outlook.com</a>
+                            </section>
+                        </div>
+                        <div class="footer-apps">
+                            <p>Download Our app</p>
+                            <img src="./images/apps.png" alt="">
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="footer-bottom">
+                    <div class="footer-links">
+                        <p>Privacy policy</p>
+                        <p>Terms of Use</p>
+                    </div>
+                    <div class="footer-copy">
+                        © 2025 Lokarth – All Rights Reserved
+                    </div>
+                </div>
+            </footer>
+
+        </main>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
