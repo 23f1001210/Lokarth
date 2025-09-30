@@ -160,38 +160,31 @@
                 </div>
             </section>
 
-            <section class="contact-us">
-                <div class="contact-text">
-                    <img src="./images/chat.png" alt="">
-                    <h2>Want to know more or collaborate with us?</h2>
+            <section class="contact-us-row">
+                <div class="contact-message">
+                    <img src="./images/Chat.png" alt="chat icon" />
+                    <h2>Want to know more or <br>collaborate with us?</h2>
                     <p>We’re happy to connect. Drop your details and we’ll get back to you</p>
-                    <button class="contact-button" id="openModalBtn">Contact Us</button>
                 </div>
-            </section>
-
-            <!-- Modal -->
-            <div id="contactModal" class="modal">
-                <div class="modal-content">
-                    <span class="close" id="closeModalBtn">&times;</span>
-                    <h3>Contact Details</h3>
+                <div class="contact-card">
                     <form id="contactForm">
-                        <label for="name">Name:</label>
-                        <input type="text" id="name" name="name" required><br>
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="i.e. John Doe" required>
 
-                        <label for="email">Email ID:</label>
-                        <input type="email" id="email" name="email" required><br>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="i.e. john@mail.com" required>
 
-                        <label for="phone">Phone Number:</label>
-                        <input type="tel" id="phone" name="phone" required><br>
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" name="phone" placeholder="i.e. 123-456-7890" required>
 
-                        <label for="description">Description:</label>
-                        <textarea id="description" name="description" rows="4"
-                            style="width:100%; padding:9px 12px; border:1.5px solid #161616; border-radius:8px; background:#fafafa; font-size:1rem; resize: vertical;"></textarea><br><br>
+                        <label for="description">Description</label>
+                        <textarea id="description" name="description"
+                            placeholder="Please describe your query or message" rows="4"></textarea>
 
-                        <button type="submit">Submit</button>
+                        <button type="submit" class="contact-submit">Contact Us</button>
                     </form>
                 </div>
-            </div>
+            </section>
 
             <footer class="footer">
                 <div class="footer-top">

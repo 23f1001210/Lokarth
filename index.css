@@ -553,6 +553,16 @@ p.subtitle {
   border-radius: 25px;
   text-decoration: none;
   font-weight: 500;
+  
+}
+
+.btn-donate {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+
+.card-footer{
+  font-family: 'Ubuntu', sans-serif;
 }
 
 .mission-image {
@@ -618,7 +628,7 @@ p.subtitle {
 .footer {
   background: #f7fafd;
   padding: 2rem;
-  font-family: Arial, sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   color: #333;
 }
 
@@ -874,7 +884,7 @@ p.subtitle {
   /* subtle overlay using #2e6c92 */
   justify-content: center;
   align-items: center;
-  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 .modal-content {
@@ -900,93 +910,117 @@ p.subtitle {
   }
 }
 
-.modal-content {
+.contact-us-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(120deg, #377399 0%, #7fbbdf 100%);
+  padding: 48px 0;
+  min-height: 100vh;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.contact-message {
+  flex: 1;
+  color: #fff;
+  padding-left: 5vw;
+  padding-right: 48px;
+  text-align: left;
+  max-width: 480px;
+}
+
+.contact-message img {
+  width: 48px;
+  margin-bottom: 28px;
+}
+
+.contact-message h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.contact-message p {
+  font-size: 1.12rem;
+  color: #e9f1f7;
+}
+
+.contact-card {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+#contactForm {
   background: #fff;
-  padding: 20px 22px 18px 22px;
-  border-radius: 14px;
-  box-shadow: 0 7px 24px rgba(46, 108, 146, 0.12);
-  width: 320px; /* narrower width */
-  max-width: 90vw;
-  max-height: 85vh;
-  overflow-y: auto;
-  margin: 0 auto;
-  position: relative;
-  animation: fadeIn 0.22s ease;
+  padding: 30px 22px 24px 22px;
+  border-radius: 13px;
+  box-shadow: 0 8px 36px rgba(46,108,146,0.13);
+  width: 340px;
+  display: flex;
+  flex-direction: column;
 }
 
-.modal-content h3 {
-  color: #333;
-  margin-bottom: 6px;
-  text-align: center;
-  font-size: 1.25rem;
-  font-weight: 600;
-}
-
-.modal-content label {
-  display: block;
-  margin-top: 3px;
+#contactForm label {
+  font-size: 1rem;
+  color: #222;
   margin-bottom: 3px;
-  color: #333;
-  font-size: 0.93rem;
+  margin-top: 13px;
   font-weight: 600;
 }
 
-.modal-content input[type="text"],
-.modal-content input[type="email"],
-.modal-content input[type="tel"],
-.modal-content textarea {
+#contactForm input, #contactForm textarea {
   width: 100%;
-  padding: 7px 10px;
-  margin-bottom: 8px;
-  border: 1.5px solid #333;
-  border-radius: 6px;
-  background: #fafafa;
-  font-size: 0.9rem;
+  padding: 10px 12px;
+  margin-top: 2px;
+  margin-bottom: 7px;
+  border: 1.2px solid #b7b7b7;
+  border-radius: 7px;
+  background: #f6fafd;
+  font-size: 1rem;
   color: #333;
-  transition: border-color 0.15s, background 0.15s;
+  transition: border-color 0.17s, background 0.15s;
   box-sizing: border-box;
 }
 
-.modal-content input:focus,
-.modal-content textarea:focus {
-  border-color: #333;
+#contactForm input:focus, #contactForm textarea:focus {
+  border-color: #2e6c92;
   background: #fff;
   outline: none;
 }
 
-.modal-content textarea {
-  min-height: 70px;
-  resize: vertical;
-}
-
-.modal-content button[type="submit"] {
+.contact-submit {
   background: #2e6c92;
   color: #fff;
-  font-size: 1rem;
-  font-weight: 600;
-  width: 100%;
-  margin-top: 10px;
+  font-size: 1.06rem;
+  font-weight: bold;
   border: none;
   border-radius: 7px;
-  padding: 8px 0;
+  padding: 11px 0;
+  margin-top: 20px;
   cursor: pointer;
-  transition: background 0.18s;
-  box-shadow: 0 2px 12px rgba(46, 108, 146, 0.1);
+  box-shadow: 0 2px 14px rgba(46, 108, 146, 0.12);
+  transition: background 0.16s;
 }
 
-.modal-content button[type="submit"]:hover {
-  background: #333;
+.contact-submit:hover {
+  background: #174866;
 }
 
-.close {
-  position: absolute;
-  right: 18px;
-  top: 12px;
-  font-size: 24px;
-  font-weight: bold;
-  color: #2e6c92;
-  background: none;
-  border: none;
-  cursor: pointer;
+@media (max-width: 900px) {
+  .contact-us-row {
+    flex-direction: column;
+    padding: 30px 5vw;
+  }
+  .contact-message {
+    padding: 0;
+    margin-bottom: 36px;
+    text-align: center;
+  }
+  .contact-card {
+    width: 100%;
+    justify-content: center;
+  }
 }
+
 

@@ -63,6 +63,7 @@ features.forEach(feature => {
       collected: 900,
       remaining: 334,
       progressColor: "#16a34a"
+      
     },
     {
       category: "Blood",
@@ -129,25 +130,8 @@ features.forEach(feature => {
     doner.appendChild(card);
   });
 
-const openModalBtn = document.getElementById('openModalBtn');
-const closeModalBtn = document.getElementById('closeModalBtn');
-const contactModal = document.getElementById('contactModal');
-
-openModalBtn.onclick = function() {
-    contactModal.style.display = 'flex';
-};
-
-closeModalBtn.onclick = function() {
-    contactModal.style.display = 'none';
-};
-
-window.onclick = function(event) {
-    if (event.target == contactModal) {
-        contactModal.style.display = 'none';
-    }
-};
-
 const contactForm = document.getElementById('contactForm');
+
 contactForm.onsubmit = function(event) {
     event.preventDefault();
 
@@ -166,7 +150,6 @@ contactForm.onsubmit = function(event) {
     })
     .then(function(response) {
         alert('Thank you! Your message has been sent.');
-        contactModal.style.display = 'none';
         contactForm.reset();
     })
     .catch(function(error) {
@@ -174,6 +157,6 @@ contactForm.onsubmit = function(event) {
     })
     .finally(function() {
         submitBtn.disabled = false;
-        submitBtn.textContent = 'Submit';
+        submitBtn.textContent = 'Contact Us';
     });
 };
