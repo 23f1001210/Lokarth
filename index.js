@@ -1,56 +1,51 @@
 const features = [
   {
-    icon: "fa-solid fa-shield-halved",
+    icon: "/images/Frame.png",
     title: "Verified Charities & Donors",
     description:
-      "Every connection on Lokarth is authentic. We partner with verified charities and genuine individuals, ensuring your donations reach only the right hands."
+      "Every connection on Lokarth is authentic. We partner with verified charities and genuine individuals, ensuring your donations reach only the right hands. Trust is at the heart of giving."
   },
   {
-    icon: "fa-solid fa-chart-line",
+    icon: "/images/Frame1.png",
     title: "Transparent Process",
     description:
-      "No more guessing where your contribution goes. Lokarth gives you complete visibility, from donation initiation to fulfillment."
+      "No more guessing where your contribution goes. Lokarth gives you complete visibility, from donation initiation to fulfillment, so you always know the impact you’re creating."
   },
   {
-    icon: "fa-solid fa-certificate",
+    icon: "/images/Frame (4).png",
     title: "Instant Certificates",
     description:
-      "Whether it’s a financial donation or blood contribution, Lokarth instantly rewards you with verified certificates."
+      "Whether it’s a financial donation or blood contribution, Lokarth instantly rewards you with verified certificates. A token of appreciation, and a record of your kindness."
+
   },
   {
-    icon: "fa-solid fa-bell",
+    icon: "/images/Frame (2).png",
     title: "Emergency Alerts",
     description:
-      "When urgent needs arise, Lokarth notifies you in real time. Because sometimes, your help can’t wait until tomorrow."
+      "When urgent needs arise—like a hospital requiring blood or disaster relief requests—Lokarth notifies you in real time. Because sometimes, your help can’t wait until tomorrow."
   },
   {
-    icon: "fa-solid fa-hand-holding-heart",
+    icon: "/images/Frame (3).png",
     title: "Multiple Ways to Give",
     description:
-      "Contribute money, food, clothes, or blood—all through one platform designed to make giving as simple as possible."
+      "Support communities the way you want. Contribute money, food, clothes, or blood—all through one platform designed to make giving as simple as possible."
   },
   {
-    icon: "fa-solid fa-chart-pie",
+    icon: "/images/Frame (5).png",
     title: "Measurable Impact",
     description:
-      "Lokarth provides clear summaries of how your donations are used, helping you witness the change you’re driving forward."
+      "See the bigger picture of your contributions. Lokarth provides clear summaries of how your donations are used, helping you witness the change you’re driving forward."
   }
 ];
 
-const container = document.getElementById("features-container");
-
-features.forEach(feature => {
-  const card = document.createElement("div");
-  card.classList.add("feature-card");
-
-  card.innerHTML = `
-    <i class="${feature.icon}"></i>
+const featuresContainer = document.getElementById('features-container');
+featuresContainer.innerHTML = features.map(feature => `
+  <div class="feature-card">
+    <img src="${feature.icon}" alt="${feature.title} icon" class="feature-icon" />
     <h3>${feature.title}</h3>
     <p>${feature.description}</p>
-  `;
-
-  container.appendChild(card);
-});
+  </div>
+`).join('');
 
 
   // Example donation data (can be fetched from API later)
@@ -62,7 +57,7 @@ features.forEach(feature => {
       goal: 1234,
       collected: 900,
       remaining: 334,
-      progressColor: "#16a34a"
+      progressColor: "#12853cff"
       
     },
     {
@@ -72,7 +67,7 @@ features.forEach(feature => {
       goal: 1234,
       collected: 1100,
       remaining: 134,
-      progressColor: "#dc2626"
+      progressColor: "#BF3C16"
     },
     {
       category: "Clothes",
@@ -81,7 +76,7 @@ features.forEach(feature => {
       goal: 1234,
       collected: 600,
       remaining: 634,
-      progressColor: "#9333ea"
+      progressColor: "#831B67"
     },
     {
       category: "Food",
@@ -90,7 +85,7 @@ features.forEach(feature => {
       goal: 1234,
       collected: 500,
       remaining: 734,
-      progressColor: "#16a34a"
+      progressColor: "#2E6C92"
     }
   ];
 
