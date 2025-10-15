@@ -1229,9 +1229,9 @@ p.subtitle {
   }
 
   .logo {
-    width: 120px;
-    height: 40px;
-    padding-top: 4px;
+    width: 240px;
+    height: 80px;
+    padding-top: 8px;
   }
 
   nav {
@@ -1404,4 +1404,5 @@ p.subtitle {
     height: auto;
   }
 }
+
 
